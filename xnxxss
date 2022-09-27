@@ -1,0 +1,12 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("البرنس")
+local Tab = Window:NewTab("Game")
+local Section = Tab:NewSection("Players")
+Section:NewButton("حارس مجاني", "حارس مجاني", function()
+    game:GetService("ReplicatedStorage").GuardRemotes.BecomeGuard:InvokeServer(true)
+
+end)
+Section:NewButton("صاحب المكان", "صاحب المكان", function()
+    game:GetService("ReplicatedStorage").FrontmanRemotes.BecomeFrontman:InvokeServer(true)
+
+end)
